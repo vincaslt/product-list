@@ -1,0 +1,14 @@
+.Header_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header_cartContainer {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.Header_cart {
+  height: 30px;
+}

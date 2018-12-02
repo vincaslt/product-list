@@ -1,9 +1,9 @@
-import * as React from "react";
-import * as PropTypes from "prop-types";
+import React from "react";
+import PropTypes from "prop-types";
 import "./ProductCard.css";
 
-export const ProductCard = ({ image, title, price }) => (
-  <div className="ProductCard_container">
+export const ProductCard = ({ image, title, price, onClick }) => (
+  <div role="button" onClick={onClick} className="ProductCard_container">
     <div className="ProductCard_imageContainer">
       <img className="ProductCard_image" src={image} alt={title} />
     </div>
@@ -17,5 +17,10 @@ export const ProductCard = ({ image, title, price }) => (
 ProductCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired
+  price: PropTypes.number.isRequired,
+  onClick: PropTypes.func
+};
+
+ProductCard.defaultProps = {
+  onClick: () => {}
 };

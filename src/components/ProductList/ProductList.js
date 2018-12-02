@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import { fetchProducts } from "../../api/products";
 import { ProductCard } from "../ProductCard";
 import "./ProductList.css";
@@ -17,10 +18,18 @@ export class ProductList extends React.Component {
       return "Loading products...";
     }
 
-    const productCards = this.state.products.map(({ id, ...product }) => (
-      <ProductCard key={id} {...product} />
+    const productCards = this.state.products.map(product => (
+      <ProductCard
+        key={product.id}
+        onClick={() => this.props.onProductClick(product)}
+        {...product}
+      />
     ));
 
     return <div className="ProductList_container">{productCards}</div>;
   }
 }
+
+ProductList.propTypes = {
+  onProductClick: PropTypes.func
+};
