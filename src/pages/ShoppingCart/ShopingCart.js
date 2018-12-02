@@ -5,7 +5,7 @@ import { CartList } from "../../components/CartList";
 export const ShopingCart = ({ linkTo, cartItems, removeCartItem }) => (
   <div>
     <a href="/shop" onClick={linkTo("shop")}>
-      Grizti i parduotuve
+      Grįžti į parduotuvę
     </a>
     <CartList onRemoveItem={removeCartItem} products={cartItems} />
   </div>

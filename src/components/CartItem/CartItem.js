@@ -12,7 +12,7 @@ export const CartItem = ({ image, title, price, quantity, onRemoveClick }) => (
           <div>Vieneto kaina: {price} eur</div>
           <div>Kiekis: {quantity} vnt.</div>
           <button className="CartItem_remove" onClick={onRemoveClick}>
-            Pasalinti
+            Pašalinti
           </button>
         </div>
         <div>Viso: {(price * quantity).toFixed(2)} eur</div>

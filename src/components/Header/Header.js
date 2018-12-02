@@ -5,12 +5,12 @@ import "./Header.css";
 
 export const Header = ({ cartSize, linkTo }) => (
   <div className="Header_container">
-    <h1>Mociutes krautuvele</h1>
+    <h1>Močiutės krautuvėlė</h1>
     <div className="Header_cartContainer">
       <span>
-        <span>Prekiu </span>
+        <span>Prekių </span>
         <a href="/cart" onClick={linkTo("cart")}>
-          krepselyje
+          krepšelyje
         </a>
         <span>: {cartSize}</span>
       </span>
