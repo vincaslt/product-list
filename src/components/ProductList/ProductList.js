@@ -14,7 +14,7 @@ export class ProductList extends React.Component {
 
   render() {
     if (!this.state.products) {
-      return "Loading products...";
+      return "Kraunama...";
     }
 
     const productCards = this.state.products.map(product => (
