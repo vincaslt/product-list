@@ -17,8 +17,8 @@ export class ProductList extends React.Component {
       return "Loading products...";
     }
 
-    const productCards = this.state.products.map(({ id, ...product }) => (
-      <ProductCard key={id} {...product} />
+    const productCards = this.state.products.map(product => (
+      <ProductCard key={product.id} {...product} />
     ));
 
     return <div className="ProductList_container">{productCards}</div>;
